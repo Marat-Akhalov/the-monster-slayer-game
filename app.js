@@ -37,11 +37,13 @@ const app = Vue.createApp({
 
       return { width: this.monsterHealth + '%' };
     },
+
     playerBarStyles() {
       if (this.playerHealth < 0) return { width: '0%' };
 
       return { width: this.playerHealth + '%' };
     },
+
     isSpecialAttackAvailable() {
       return this.currentRound % 3 !== 0;
     },
